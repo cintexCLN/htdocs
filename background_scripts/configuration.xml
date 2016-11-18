@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration_file version="1.0.0">
+	<database_login>
+		<database_link database_number='1'>
+			<database_credentials>
+				<db_username>root</db_username>
+				<db_password>Sahil_1231</db_password>
+				<db_server>localhost</db_server>
+				<db_port>8080</db_port>
+			</database_credentials>
+		</database_link>
+		<summary>
+			<total_database_link>1</total_database_link>
+		</summary>
+	</database_login>
+	<databases>
+		<database name="cln">
+	        <!-- Table user_cre -->
+	        <table name="user_cre">
+	            <column num='1'>u_id</column>
+	            <column num='2'>u_username</column>
+	            <column num='3'>u_password$</column>
+	            <column num='4'>u_first_name</column>
+	            <column num='5'>u_last_name</column>
+	            <summary>
+	            	<total_col>5</total>
+	            </summary>
+	        </table>
+        </database>
+        <summary>
+        	<total_databases>1</total_databases>
+        </summary>
+	</databases>
+</configuration_file>
