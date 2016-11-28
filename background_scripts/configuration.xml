@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration_file version="1.0.0">
+<configuration version="1.0.0">
 	<database_login>
 		<database_link database_number='1'>
 			<database_credentials>
 				<db_username>root</db_username>
 				<db_password>Sahil_1231</db_password>
 				<db_server>localhost</db_server>
-				<db_port>8080</db_port>
+				<db_port>3306</db_port>
 			</database_credentials>
 		</database_link>
 		<summary>
@@ -14,7 +14,7 @@
 		</summary>
 	</database_login>
 	<databases>
-		<database name="cln">
+		<database name="cln" number='1'>
 	        <!-- Table user_cre -->
 	        <table name="user_cre">
 	            <column num='1'>u_id</column>
@@ -23,7 +23,7 @@
 	            <column num='4'>u_first_name</column>
 	            <column num='5'>u_last_name</column>
 	            <summary>
-	            	<total_col>5</total>
+	            	<total_col>5</total_col>
 	            </summary>
 	        </table>
         </database>
@@ -31,4 +31,7 @@
         	<total_databases>1</total_databases>
         </summary>
 	</databases>
-</configuration_file>
+	<security>
+		<slt_key>$2b$12$AyoWoZpBD6lWfsw5fwf0MOjF4uXXFzQNh93nsf0AmjgrRCkV1E5yy</slt_key>
+	</security>
+</configuration>

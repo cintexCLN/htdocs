@@ -6,8 +6,10 @@ if(isset($_POST))
 	{
 		$email=$_POST['email'];
 		$password=$_POST['pswd'];
-		$result=shell_exec('python /background_scripts/validate_username.py');
-		echo $result;
+		$result=shell_exec('python C:\xampp\htdocs\background_scripts\validate_credentials.py');
+		$a=array();
+		exec('python C:\xampp\htdocs\background_scripts\validate_credentials.py',$a);
+		echo $a[0]."asas".$result;
 	}
 }
 ?>
