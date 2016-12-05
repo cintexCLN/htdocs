@@ -34,4 +34,10 @@
 	<security>
 		<slt_key>$2b$12$AyoWoZpBD6lWfsw5fwf0MOjF4uXXFzQNh93nsf0AmjgrRCkV1E5yy</slt_key>
 	</security>
+	<base_path>
+		C:\xampp\htdocs\
+	</base_path>
+	<default_ip>
+		10.22.218.50
+	</default_ip>
 </configuration>

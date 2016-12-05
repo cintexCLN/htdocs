@@ -1,19 +1,21 @@
 <?php
-
+include 'C:\\xampp\\htdocs\\config.php';
 if(isset($_SESSION['USER_ID']))
 {
   if($_SESSION['USER_ID']=='NULL')
   {
-    $_SESSION['CURRENT_STATUS']="NOT_LOGGED";
+    $_SESSION['LOGGED']="FALSE";
     session_start();
     $_SESSION['USER_ID'];
   }
   else
   {
-    $_SESSION['CURRENT_STATUS']="LOGGED";
-    //echo "<script>window.location.herf='../dashboard.php';</script>";
-    #header("location:dashboard.php");
-   
+    if($_SESSION['LOGGED']=="TRUE")
+    {
+    
+    echo "<script>window.location.herf='../dashboard.php';</script>";
+    #die();
+    }
   }
 }
 #echo "<h1>sahil</h1>".print_r($_SESSION);
@@ -32,7 +34,7 @@ if(isset($_SESSION['USER_ID']))
     <title>CLN - Customer Logistic Needs</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
@@ -42,21 +44,10 @@ if(isset($_SESSION['USER_ID']))
   <body>
  <nav class="navbar navbar-static-top navbar-dark bg-inverse">
       <a class="navbar-brand" href="#"><img style="float:left;height:30px;width:70px;" src="https://www.google.com/a/cintex.ca/images/logo.gif">&nbsp&nbsp&nbspCintex International</a>
-      <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Add Stock <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Remove Stock</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
+  </nav>
     <div class="container">
-
-      <form class="form-signin" action="login_verification.php" method="post">
+    <center>
+      <form class="form-signin" action="login_verification.php" method="post" style="width:30%;">
         <div >
           <img src="logo.png">
         </div>
@@ -72,7 +63,7 @@ if(isset($_SESSION['USER_ID']))
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
-
+    <center>
     </div> <!-- /container -->
 
 
