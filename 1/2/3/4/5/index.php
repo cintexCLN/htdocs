@@ -1,4 +1,5 @@
 <?php
+
 function get_path()
 {
   $path="";
@@ -13,8 +14,8 @@ function get_path()
   return $path;
 }
 $path=get_path();
-
-echo getcwd();
+echo $path.'config.php';
+include $path.'config.php';
 if(isset($_SESSION['USER_ID']))
 {
   if($_SESSION['USER_ID']=='NULL')
